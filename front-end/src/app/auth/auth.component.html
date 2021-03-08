@@ -1,0 +1,14 @@
+<body class="text-center container">
+    <form (submit)="signIn()" class="form-signin">
+      <img class="mb-4" src="../assets/img/favicon4.JPG" alt="logo" width="82" height="82">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <input [(ngModel)]="login" type="login" name="login" id="inputLogin" class="form-control" placeholder="Login">
+      <input [(ngModel)]="password" type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+      <div class="checkbox mb-3">
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">Create with &#x2764; by Anna Sharipkin</p>
+    </form>
+
+
+</body>

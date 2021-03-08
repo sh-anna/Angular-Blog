@@ -1,0 +1,29 @@
+<body class="container">
+    <form (submit)="createPost()" class="form-signin">
+      <h1 class="h3 mb-3 text-center font-weight-normal">Create Post:</h1>
+      <label>Category, Title and Photo:</label>
+      <select [(ngModel)]="category" class="form-control mb-3" name="category" id="category">
+          <option value="World">World</option>
+          <option value="Technology">Technology</option>
+          <option value="Design">Design</option>
+          <option value="Culture">Culture</option>
+          <option value="Business">Business</option>
+          <option value="Opinion">Opinion</option>
+          <option value="Science">Science</option>
+          <option value="Health">Health</option>
+          <option value="Sport">Sport</option>
+          <option value="Style">Style</option>
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+      </select>
+      <input [(ngModel)]="title" type="title" name="title" id="inputTitle" class="form-control mb-3" placeholder="Title">
+      <quill-editor [(ngModel)]="photo" name="photo" placeholder="photo"></quill-editor>
+      <label class="mt-3">Information:</label>
+      <quill-editor [(ngModel)]="text" name="text" placeholder="text"></quill-editor>
+      <div class="checkbox mb-3">
+      </div>
+      <button class="btn btn-lg btn-primary btn-block mb-5" type="submit">Create</button>
+    </form>
+
+
+</body>

@@ -1,0 +1,44 @@
+<div class="nav-scroller py-1 mb-3">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 font-weight-bold" (click)="setCategory('World')">World</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Technology')">Technology</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Design')">Design</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Culture')">Culture</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Business')">Business</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Opinion')">Opinion</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Science')">Science</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Health')">Health</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Sport')">Sport</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Style')">Style</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Food')">Food</a>
+      <a class="p-2 font-weight-bold" (click)="setCategory('Travel')">Travel</a>
+    </nav>
+  </div>
+
+  <div class="row d-flex">
+    <div class="figure">
+        <img class="photo" src="https://www.la-palafitta.com/website-images/test/image-thumb__33__header-large/lapalafitta-03.jpeg" alt="">
+        <div class="col-md-6 px-0 p-5">
+          <h1 class="display-4 font-italic">Welcome!</h1>
+          <p class="lead my-3">This blog publishes news from the world of technology, business, travel, culture, fashion, health. Join us, register now and write your first post!</p>
+          <p class="lead mb-0"><a [routerLink]="['/reg']" class="text-white font-weight-bold">Registration...</a></p>
+        </div>
+      </div>
+
+      <div *ngFor="let post of posts | sorting: category" class="col-md-4">
+        <div class="p-0 mb-4 box-shadow">
+          <quill-view [content]="post.photo"></quill-view>
+          <div class="card-body mb-3">
+            <div class="m-0 d-flex justify-content-between align-items-center">
+                <strong class="mb-2 text-primary">{{ post.category }}</strong>
+                <small class="text-muted">{{ post.date | date: "short" }}</small>
+            </div>
+            <h4 class="m-0">
+                <a class="text-dark" [routerLink]="['post', post._id]">{{ post.title }}</a>
+            </h4>
+            <quill-view [content]="post.text"></quill-view>
+          </div>
+        </div>
+      </div>
+
+  </div>

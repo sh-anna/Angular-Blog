@@ -1,0 +1,24 @@
+.figure {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+
+    color: white;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.photo {
+    position: absolute;
+    width: 100%;
+    margin: -10% 0 0 0;
+}
+
+.card-body {
+    margin-top: -1.5rem;
+}
+
+a {
+  color:  #3DC2AD;
+  font-family: 'Akaya Telivigala', cursive;
+}

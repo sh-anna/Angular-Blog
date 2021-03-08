@@ -1,0 +1,10 @@
+<div id="header" class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal"><img class="mb-3" src="../assets/img/favicon4.JPG" alt="logo" width="48" height="48">Blog</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" [routerLink]="['/']">Home</a>
+      <a *ngIf="authService.isAuthenticated()" class="p-2 text-dark" [routerLink]="['/dashboard']">Dashboard</a>
+    </nav>
+    <a *ngIf="!authService.isAuthenticated()" class="btn btn-outline-primary mr-3" [routerLink]="['/auth']">Sign in</a>
+    <a *ngIf="!authService.isAuthenticated()" class="btn btn-outline-primary" [routerLink]="['/reg']">Sign up</a>
+    <a *ngIf="authService.isAuthenticated()" class="btn btn-outline" (click)="logoutUser()">Logout</a>
+  </div>

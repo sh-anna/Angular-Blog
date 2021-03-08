@@ -1,0 +1,13 @@
+.container {
+    max-width: 400px;
+    margin-top: 6rem;
+}
+.btn {
+  background: #F8D287;
+  color: #FFFFFF;
+  border-color: #F79D83;
+}
+.btn:hover {
+  border-color: #972EBE;
+  background: linear-gradient(to right, #CD4E81, #922AC5, #F79D83, #F8D287);
+}
