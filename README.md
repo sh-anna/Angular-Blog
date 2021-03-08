@@ -6,6 +6,11 @@ The Blogig App was generate with using MEAN.
 - Angular – front-end framework,
 - Node.JS – back-end runtime environment.
 
+![alt text](https://github.com/sh-anna/Angular-Blog/blob/main/screenshots/screen1.JPG)
+![alt text](https://github.com/sh-anna/Angular-Blog/blob/main/screenshots/screen3.JPG)
+![alt text](https://github.com/sh-anna/Angular-Blog/blob/main/screenshots/screen4.JPG)
+![alt text](https://github.com/sh-anna/Angular-Blog/blob/main/screenshots/screen2.JPG)
+
 #About
 ----------
 This web application is for my learning purposes, samples of use cases in angular. The goal of this app is to test the different approaches in [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
